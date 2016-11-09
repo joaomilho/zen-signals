@@ -1,0 +1,33 @@
+{
+  "name": "@klarna/zen-signals",
+  "version": "1.0.0",
+  "description": "☯ The simplest signal library possible",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --display-modules --config webpack.config.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klarna/zen-signals.git"
+  },
+  "keywords": [
+    "streams",
+    "signals",
+    "simple",
+    "functor",
+    "ramda"
+  ],
+  "author": "Juan Lulkin <maiz@lulk.in> (https://medium.com/@joaomilho/)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/klarna/zen-signals/issues"
+  },
+  "homepage": "https://github.com/klarna/zen-signals#readme",
+  "devDependencies": {
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "ramda": "^0.22.1",
+    "webpack": "^1.13.3"
+  }
+}
