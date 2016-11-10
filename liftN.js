@@ -14,8 +14,6 @@
  */
 
 import snapshot from './snapshot'
-import map from 'ramda/src/map'
 
-export default (combine, ...behaviors) => () => {
-  return combine(...map(snapshot, behaviors))
-}
+export default (combine, ...behaviors) => () =>
+  combine(...behaviors.map(snapshot))

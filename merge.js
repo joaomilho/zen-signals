@@ -19,8 +19,6 @@
  *
  */
 
-import forEach from 'ramda/src/forEach'
-
 export default (...eventSources) => (next) => {
-  forEach((source) => source(next), eventSources)
+  eventSources.forEach((source) => source(next))
 }

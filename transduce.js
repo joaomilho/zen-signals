@@ -60,15 +60,11 @@
  */
 
 import transduce from 'ramda/src/transduce'
-import flip from 'ramda/src/flip'
-import append from 'ramda/src/append'
-import head from 'ramda/src/head'
-import of from 'ramda/src/of'
 import build from './build'
 
 export default build((xform, next, value) => {
-  const transducer = transduce(xform, flip(append), [])
+  const transducer = transduce(xform, (a, v) => a.concat(v), [])
 
-  const result = head(transducer(of(value)))
+  const result = transducer([value])[0]
   typeof result !== 'undefined' && next(result)
 })
