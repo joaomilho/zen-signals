@@ -1,11 +1,11 @@
 import test from 'tape'
-import identity from '../identity'
+import id from '../id'
 import { spy } from 'sinon'
 
-test('identity', (assert) => {
+test('id', (assert) => {
   const signal = spy()
   const next = spy()
-  identity()(signal)(next)
+  id()(signal)(next)
 
   const handler = signal.getCall(0).args[0]
 
