@@ -25,7 +25,7 @@ Now, everyone is saying – in public – that these pesky called side effects s
 
 ##### A classic example
 
-To understand all that verbiage, let's consider a classic example: search. When searching we generally want to avoid doing unecessary trips to our data store. If we're talking about a web app, even worst! Blame those lazy physics who still couldn't figure out how to build these quantum computers they love to talk about and make internet requests break the speed of light!
+To understand all that verbiage, let's consider a classic example: search. When searching we generally want to avoid doing unecessary trips to our data store. If we're talking about a web app, even worst! Blame those lazy physicists who still couldn't figure out how to build these quantum computers they love to talk about and make internet requests break the speed of light!
 
 Therefore, let's add two commandments to our search:
 
