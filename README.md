@@ -5,7 +5,7 @@
 </center>
 <br />
 
-zen-signals is a signal library focused on readability. You should be able to open the code and understand it. Therefore, it's main value is educational. Yes, you can use it in your project, and maybe even in production, but it will fall short for more complex use cases. If you're learning Rx (or any other production ready signal library), you may find understanding and reading zen-signal's code helpful.
+zen-signals is a signal library focused on readability. You should be able to open the code and understand it. Therefore, its main value is educational. Yes, you can use it in your project, and maybe even in production, but it will fall short for more complex use cases. If you're learning Rx (or any other production ready signal library), you may find understanding and reading zen-signal's code helpful.
 
 <hr />
 
