@@ -15,7 +15,7 @@ import curry from 'ramda/src/curry'
 export default curry((eventSource, next) => {
   let lastValue
 
-  eventSource((value) => {
+  return eventSource((value) => {
     if (lastValue !== value) {
       next(lastValue = value)
     }

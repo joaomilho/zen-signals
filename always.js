@@ -12,6 +12,4 @@
 
 import build from './build'
 
-export default build((constant, next) => {
-  next(constant)
-})
+export default build((constant, next) => next(constant))
