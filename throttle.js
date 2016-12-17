@@ -1,5 +1,3 @@
-/* globals performance */
-
 /*
  * `throttle` buffers emitting the value for a given amount of time, in
  * milliseconds.
@@ -12,25 +10,11 @@
 
 import curry from 'ramda/src/curry'
 
+let last, timer
 export default curry((ms, eventSource, next) => {
-  let last, timer
+  return eventSource((value) => {
+    clearTimeout(timer)
 
-  eventSource((value) => {
-    let now = typeof performance !== 'undefined'
-      ? performance.now()
-      : Date.now()
-
-    if (timer) {
-      clearTimeout(timer)
-    }
-
-    if (!last || (now - last) > ms) {
-      last = now
-      next(value)
-    } else {
-      timer = setTimeout(() => {
-        next(value)
-      }, ms - (now - last))
-    }
+    timer = setTimeout(() => next(value), ms)
   })
 })
