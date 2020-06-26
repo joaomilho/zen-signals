@@ -1,13 +1,25 @@
+<img src="https://infiniteshift.files.wordpress.com/2013/05/vesica-piscis.jpg" width="200" />
+
 <center>
-![](https://infiniteshift.files.wordpress.com/2013/05/vesica-piscis.jpg)
+
 <h1>zen-signals</h1>
 <h4>The simplest signal library possible</h4>
 </center>
 <br />
 
-zen-signals is a signal library focused on readability. You should be able to open the code and understand it. Therefore, its main value is educational. Yes, you can use it in your project, and maybe even in production, but it will fall short for more complex use cases. If you're learning Rx (or any other production ready signal library), you may find understanding and reading zen-signal's code helpful.
+---
+
+zen-signals is a signal library focused on readability. You should be able to open the code and understand it. Therefore, its main value is educational. If you're learning Rx (or any other production ready signal library), you may find understanding and reading zen-signal's code helpful.
 
 <hr />
+
+##### hello world
+
+```ts
+import { on, fromValue, id } from 'zen-signals'
+
+on(fromValue(10), id, console.log) // will immediatelly log 10
+```
 
 ##### The "necessary" verbiage part
 
@@ -42,65 +54,60 @@ Now the one using `zen-signal`:
 
 You're probably thinking "But wait, this is a strawman! I could have also used functions in the procedural version!". Thing is that the boundaries of these functions would not be so clearly defined, plus in the `zen-signals` version all the process that happens – defining clearly our laws – is perfectly composable. This means that, for instance, you could group them and then reuse them.
 
-    // search.js
-    const search = ({min, wait}) => pipe(
-      map((event) => event.target.value),
-      reject((value) => value.length < min),
-      throttle(wait)
-    )
+```ts
+// search.js
+const search = ({ min, wait }) => pipe(
+  map((event) => event.target.value),
+  reject((value) => value.length < min),
+  throttle(wait)
+)
 
     export default search
 
 And then...
 
-    // advancedSearch.js
-    const advancedSearch = pipe(
-      search({min: 3, wait: 1000}),
-      // more laws here!
-    )
+```ts
+// advancedSearch.js
+const advancedSearch = pipe(
+  search({min: 3, wait: 1000}),
+  // more laws here!
+)
 
-    export default advancedSearch
-    
+export default advancedSearch
+```
+
 ##### hello world
 
-```js
-import {signal, id} from 'zen-signals'
+```ts
+import { on, fromValue, id } from 'zen-signals'
 
-id(signal(10), console.log) // will immediatelly log 10
+on(fromValue(10), id, console.log) // will immediatelly log 10
 ```
 
 ### sources
 
-[signal](signal), [fromEvent](fromEvent), [fromAnimationFrame](fromAnimationFrame)
+- [fromValue](./fromValue.ts)
+- [fromEvent](./fromEvent.ts)
+- [fromAnimationFrame](./fromAnimationFrame.ts)
+
+### signal processing
 
 
-### processes
+- [after](./after.ts) 
+- [before](./before.ts) 
+- [between](./after.ts) 
+- [merge](./merge.ts) 
+- [mergeAll](./mergeAll.ts) 
 
-[always](./docs/always.md), bind, distinct, filter, fold, hub, id, liftN, map, merge, reject, snapshot, stepper, stop, takeBetween, takeUntil, throttle, transduce
+### value processing
 
-
-<a name="always"></a>
-##### always
-
-```js
-import {signal, map} from 'zen-signals'
-
-map((x) => x + 1, signal(10), console.log) // will immediatelly log 11
-```
-
-<a name="map"></a>
-##### map
-
-```js
-import {signal, map} from 'zen-signals'
-
-map((x) => x + 1, signal(10), console.log) // will immediatelly log 11
-```
-
-##### filter
-
-```js
-import {signal, filter} from 'zen-signals'
-
-filter((x) => x > 20, signal(10), console.log)
-```
+- [always](./always.ts)
+- [distinct](./distinct.ts)
+- [filter](./filter.ts)
+- [fold](./fold.ts)
+- [id](./fold.ts)
+- [map](./map.ts)
+- [reject](./reject.ts)
+- [stop](./stop.ts)
+- [throttle](./throttle.ts)
+- [transduce](./transduce.ts)
