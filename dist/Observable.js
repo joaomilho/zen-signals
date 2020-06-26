@@ -1,3 +1,4 @@
+"use strict";
 /**
  * Observable
  *
@@ -8,11 +9,9 @@
  * In this example we're event omitting 2 very important aspects of any minimally decent
  * observable, a way to stop it and dealing with errors.
  */
-
-export interface Observable {
-  (next: Function): void;
-}
-
-export const observable = (): Observable => (next: Function) => {
-  return (value: any) => next(value);
-};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.observable = void 0;
+exports.observable = function () { return function (next) {
+    return function (value) { return next(value); };
+}; };
+//# sourceMappingURL=Observable.js.map

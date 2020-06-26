@@ -8,11 +8,7 @@
  * In this example we're event omitting 2 very important aspects of any minimally decent
  * observable, a way to stop it and dealing with errors.
  */
-
 export interface Observable {
-  (next: Function): void;
+    (next: Function): void;
 }
-
-export const observable = (): Observable => (next: Function) => {
-  return (value: any) => next(value);
-};
+export declare const observable: () => Observable;
