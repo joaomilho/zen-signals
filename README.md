@@ -86,28 +86,28 @@ on(fromValue(10), id, console.log) // will immediatelly log 10
 
 ### sources
 
-- [fromValue](./fromValue.ts)
-- [fromEvent](./fromEvent.ts)
-- [fromAnimationFrame](./fromAnimationFrame.ts)
+- [fromValue](./src/fromValue.ts)
+- [fromEvent](./src/fromEvent.ts)
+- [fromAnimationFrame](./src/fromAnimationFrame.ts)
 
 ### signal processing
 
 
-- [after](./after.ts) 
-- [before](./before.ts) 
-- [between](./after.ts) 
-- [merge](./merge.ts) 
-- [mergeAll](./mergeAll.ts) 
+- [after](./src/after.ts) 
+- [before](./src/before.ts) 
+- [between](./src/after.ts) 
+- [merge](./src/merge.ts) 
+- [mergeAll](./src/mergeAll.ts) 
 
 ### value processing
 
-- [always](./always.ts)
-- [distinct](./distinct.ts)
-- [filter](./filter.ts)
-- [fold](./fold.ts)
-- [id](./fold.ts)
-- [map](./map.ts)
-- [reject](./reject.ts)
-- [stop](./stop.ts)
-- [throttle](./throttle.ts)
-- [transduce](./transduce.ts)
+- [always](./src/always.ts)
+- [distinct](./src/distinct.ts)
+- [filter](./src/filter.ts)
+- [fold](./src/fold.ts)
+- [id](./src/id.ts)
+- [map](./src/map.ts)
+- [reject](./src/reject.ts)
+- [stop](./src/stop.ts)
+- [throttle](./src/throttle.ts)
+- [transduce](./src/transduce.ts)
