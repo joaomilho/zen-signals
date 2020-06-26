@@ -13,6 +13,14 @@ zen-signals is a signal library focused on readability. You should be able to op
 
 <hr />
 
+##### hello world
+
+```ts
+import { on, fromValue, id } from 'zen-signals'
+
+on(fromValue(10), id, console.log) // will immediatelly log 10
+```
+
 ##### The "necessary" verbiage part
 
 To understand zen-signals, you need to understand 3 things: signals, processes and side effects. As names suggest, a signal is a place where data comes from; a process is something that changes data - and only data; and a side effect is something that changes other things than data.
