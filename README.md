@@ -3,13 +3,13 @@
 <center>
 
 <h1>zen-signals</h1>
-<h4>The simplest signal library possible</h4>
+<h4>The simplest observable library possible</h4>
 </center>
 <br />
 
----
+zen-signals is an observable library focused on readability.
 
-zen-signals is a signal library focused on readability. You should be able to open the code and understand it. Therefore, its main value is educational. If you're learning Rx (or any other production ready signal library), you may find understanding and reading zen-signal's code helpful.
+You should be able to open the code and understand it. Its value is educational. If you're learning Rx (or any other production-ready library), you may find understanding and reading zen-signal's code helpful.
 
 <hr />
 
