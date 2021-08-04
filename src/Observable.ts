@@ -5,8 +5,8 @@
  * not to be production ready. For examples of the actual needed complexity, check RxJS's
  * codebase, particularly https://github.com/ReactiveX/rxjs/blob/master/src/internal/Observable.ts
  *
- * In this example we're event omitting 2 very important aspects of any minimally decent
- * observable, a way to stop it and dealing with errors.
+ * In this example we're omitting 2 very important aspects of any minimally decent
+ * observable, namely, a way to stop it and a way of dealing with errors.
  */
 
 export interface Observable {
