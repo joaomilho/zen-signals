@@ -6,7 +6,7 @@
  * transducer protocol https://github.com/cognitect-labs/transducers-js#the-transducer-protocol
  *
  * There's a lot of FUD about transducers online, but the main advantage
- * of using them in zen-signals (we'll, of understanding them in zen-signals)
+ * of using them in zen-signals (well, of understanding them in zen-signals)
  * is that you can use a transducer in any compatible library. For instance,
  * the transducer below will work in regular arrays, in zen-signals, in most
  * https://github.com/cujojs/most/blob/master/docs/api.md#transduce and elsewhere.
